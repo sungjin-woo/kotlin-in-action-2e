@@ -23,10 +23,10 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+kotlin {
+    jvmToolchain(17)
 }
 
-sourceSets.main {
-    java.srcDirs("src/main/kotlin")
+application {
+    mainClass.set("MainKt")
 }
